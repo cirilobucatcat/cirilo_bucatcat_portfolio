@@ -23,5 +23,6 @@ export default function Home() {
     <Ellipse ellipseClass={"-top-20 -left-50"} />
     <Ellipse ellipseClass={"size-111.25 top-230 -right-50"} />
     <Ellipse ellipseClass={"size-80.5 top-430 left-20"} />
+    <Ellipse ellipseClass={"size-60 top-700 left-150"} />
   </>);
 }
