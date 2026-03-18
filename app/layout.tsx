@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${openSans.variable} ${robotoMono.variable} bg-[url(/noisebg.png)] bg-repeat overflow-x-hidden bg-nero px-75 antialiased`}
+        className={`${openSans.variable} ${robotoMono.variable} bg-[url(/noisebg.png)] bg-repeat overflow-x-hidden bg-nero px-10 md:px-75 antialiased`}
       >
         {children}
       </body>
