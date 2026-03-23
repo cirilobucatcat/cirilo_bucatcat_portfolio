@@ -11,7 +11,7 @@ type ProjectCardProps = {
 }
 
 export default function ProjectCard({ title, description, imageSrc, repositoryUrl, demoUrl, projectStacks }: ProjectCardProps) {
-    return (<div className="rounded-lg h-125 w-90 p-0.5 bg-brand-gradient">
+    return (<div className="rounded-lg h-125 w-full lg:w-90 p-0.5 bg-brand-gradient">
         <div className="bg-nero rounded-lg h-full">
             <Image
                 src={imageSrc}
@@ -29,11 +29,11 @@ export default function ProjectCard({ title, description, imageSrc, repositoryUr
                 </Link>
             </div>
             <div className="px-6.25 mt-1">
-                <h3 className="text-ghost-white font-bold text-base h-17 flex items-center justify-start">{title}</h3>
-                <p className="text-ghost-white text-sm h-24 flex items-baseline justify-start text-justify">{description}</p>
+                <h3 className="text-ghost-white font-bold text-base lg:text-lg h-17 flex items-center justify-start">{title}</h3>
+                <p className="text-ghost-white text-sm lg:text-md h-24 flex items-baseline justify-start text-justify">{description}</p>
             </div>
             <div className="flex items-center justify-center gap-x-4 flex-wrap">
-                {projectStacks.map((projectStack) => (<p key={projectStack} className="text-vivid-sky-blue underline">{projectStack}</p>))}
+                {projectStacks.map((projectStack) => (<p key={projectStack} className="text-vivid-sky-blue underline text-sm lg:text-base">{projectStack}</p>))}
             </div>
         </div>
     </div>)

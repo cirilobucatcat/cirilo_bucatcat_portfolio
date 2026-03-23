@@ -1,5 +1,6 @@
 import { Open_Sans, Roboto_Mono } from "next/font/google";
 import "./globals.css";
+import Ellipse from "@/components/shared/ellipse";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -19,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${openSans.variable} ${robotoMono.variable} bg-[url(/noisebg.png)] bg-repeat overflow-x-hidden bg-nero px-10 md:px-75 antialiased`}
+        className={`${openSans.variable} ${robotoMono.variable} bg-[url(/noisebg.png)] bg-repeat bg-nero px-6 lg:px-75 antialiased overflow-x-hidden relative`}
       >
         {children}
       </body>
