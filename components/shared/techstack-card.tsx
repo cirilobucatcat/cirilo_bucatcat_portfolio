@@ -22,13 +22,13 @@ export default function TechStackCard({ src, alt, containerClassName, imageClass
         setIsMouseInside(false);
     };
 
-    const aStyle = isMouseInside ? 'after:animate-spin' : 'after:animate-none'
+    const aStyle = isMouseInside ? 'after:animate-ping' : 'after:animate-none'
 
-    return (<div className={twMerge('size-18 md:size-32 lg:size-42.5 relative bg-brand-gradient transition-colors duration-300 p-px rounded-lg hover:animate-spin after:size-42.5 after:absolute after:top-0 after:right-px', containerClassName ?? '', aStyle)}>
+    return (<div className={twMerge('size-18 md:size-32 lg:size-42.5 relative bg-brand-gradient transition-colors duration-300 p-px rounded-lg hover:animate-ping after:size-42.5 after:absolute after:top-0 after:right-px', containerClassName ?? '', aStyle)}>
         <div 
             onMouseEnter={handleMouseEnter} 
             onMouseLeave={handleMouseLeave} 
-            className='bg-nero size-18 md:size-32 rounded-lg flex items-center justify-center'
+            className='bg-nero size-18 md:size-32 lg:size-42 rounded-lg flex items-center justify-center'
         >
             <Image
                 src={src}

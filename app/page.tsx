@@ -4,6 +4,7 @@ import Navigation from "@/components/navigation";
 import ProjectsSection from "@/components/projects/section";
 import Ellipse from "@/components/shared/ellipse";
 import TechStackSection from "@/components/techstack/section";
+import ContactSection from "@/components/contact/section";
 
 export const metadata: Metadata = {
   title: "Cirilo Bucatcat Jr. - Full Stack Web Developer",
@@ -19,6 +20,7 @@ export default function Home() {
       <HeroSection />
       <ProjectsSection />
       <TechStackSection />
+      <ContactSection />
     </main>
     <Ellipse ellipseClass={"size-80 lg:size-111.25 -top-100 -left-10 lg:-top-20 lg:-left-50"} />
     <Ellipse ellipseClass={"size-50 lg:size-111.25 top-230 right-0 lg:-right-50"} />

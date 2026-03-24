@@ -77,7 +77,7 @@ export default function TechStackSection() {
       alt: 'Figma'
     }
   ]
-  return (<section id='techstack' className='relative pt-32'>
+  return (<section id='techstack' className='relative pt-18 lg:pt-32'>
     <h3 className='text-center text-header-gradient font-extrabold text-2xl tracking-[5%] leading-[110%] uppercase'>tech stack</h3>
     <p className='text-center text-ghost-white/85 mt-2.75 text-xs lg:text-sm'>These are my primary tech stack that I have learned and actively used</p>
     <div className='grid place-items-center grid-cols-3 lg:grid-cols-6 gap-y-3 mt-6 lg:mt-12'>
@@ -87,6 +87,6 @@ export default function TechStackSection() {
         alt={techStack.alt}
       />))}
     </div>
-    <p className='mt-16 text-center text-lg text-vivid-sky-blue uppercase underline font-semibold leading-1.5'><Link href="/techstacks">View More</Link></p>
+    <p className='mt-8 lg:mt-16 text-center text-sm lg:text-lg text-vivid-sky-blue uppercase underline font-semibold leading-1.5'><Link href="/techstacks">View More</Link></p>
   </section>)
 }

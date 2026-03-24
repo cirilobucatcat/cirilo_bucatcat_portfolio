@@ -11,7 +11,7 @@ export default function HeroSection() {
                 </span>
             </h1>
             <h3 className="text-ghost-white text-sm lg:w-137.5 text-center mt-3">A web developer dedicated about creating efficient and user-friendly solutions to meet the ever-evolving needs of the digital world using AI.</h3>
-            <button className="bg-vivid-sky-blue text-nero mt-8 lg:mt-20.5 w-36 lg:w-50 lg:text-base text-sm font-semibold uppercase h-10 lg:h-11.25 rounded-sm cursor-pointer hover:bg-vivid-sky-blue/85">Download CV</button>
+            <button className="bg-vivid-sky-blue text-nero mt-8 lg:mt-18 w-36 lg:w-50 lg:text-base text-sm font-semibold uppercase h-10 lg:h-14 rounded-sm cursor-pointer hover:bg-vivid-sky-blue/85">Download CV</button>
         </section>
     )
 }
