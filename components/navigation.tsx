@@ -5,7 +5,7 @@ export default function Navigation() {
         <nav>
             <div className="hidden lg:flex bg-brand-gradient rounded-full p-0.5">
                 <div className="flex justify-between bg-[#373737] rounded-full w-full px-8 py-5">
-                    <Link href="#">
+                    <Link href="/">
                         <span className="font-display text-base font-extrabold uppercase text-header-gradient">CIRILO B</span>
                     </Link>
                     <ul className="flex gap-x-5">

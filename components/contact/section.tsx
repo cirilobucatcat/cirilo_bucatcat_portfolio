@@ -1,87 +1,12 @@
 import Image from 'next/image'
-import TechStackCard from '../shared/techstack-card'
 import Link from 'next/link'
 
 export default function ContactSection() {
 
-  const techStacks = [
-    {
-      src: '/js.svg',
-      alt: 'JavaScript'
-    },
-    {
-      src: '/typescript.svg',
-      alt: 'TypeScript'
-    },
-    {
-      src: '/php.svg',
-      alt: 'PHP'
-    },
-    {
-      src: '/laravel.svg',
-      alt: 'Laravel'
-    },
-    {
-      src: '/vuejs.svg',
-      alt: 'VueJS'
-    },
-    {
-      src: '/angular.svg',
-      alt: 'Angular'
-    },
-    {
-      src: '/docker.svg',
-      alt: 'Docker'
-    },
-    {
-      src: '/tailwindcss.svg',
-      alt: 'TailwindCSS'
-    },
-    {
-      src: '/postgresql.svg',
-      alt: 'PostgreSQL'
-    },
-    {
-      src: '/html5.svg',
-      alt: 'HTML 5'
-    },
-    {
-      src: '/css3.svg',
-      alt: 'CSS 3'
-    },
-    {
-      src: '/aws.svg',
-      alt: 'Amazon Web Services'
-    },
-    {
-      src: '/digitalocean.svg',
-      alt: 'Digital Ocean'
-    },
-    {
-      src: '/linux.svg',
-      alt: 'Linux'
-    },
-    {
-      src: '/nodejs.svg',
-      alt: 'Nodejs'
-    },
-    {
-      src: '/npm.svg',
-      alt: 'Node Package Manager'
-    },
-    {
-      src: '/git.svg',
-      alt: 'Git'
-    },
-    {
-      src: '/figma.svg',
-      alt: 'Figma'
-    }
-  ]
-  return (<section id='techstack' className='relative pt-18 lg:pt-32'>
+  return (<section id='contact' className='relative pt-18 lg:pt-32'>
     <h3 className='text-center text-header-gradient font-extrabold text-2xl tracking-[5%] leading-[110%] uppercase'>contact</h3>
     <p className='text-center text-ghost-white/85 mt-2.75 text-xs lg:text-sm'>Let`s collaborate and make things into reality</p>
-    <div className='mt-12 grid grid-cols-2 gap-x-4 place-items-center'>
+    <div className='mt-12 grid grid-cols-2 gap-x-4 place-items-start justify-items-center'>
       <div className='flex flex-col gap-y-4 w-full'>
         <div className='flex flex-col'>
           <div className='inline-flex space-x-2'>
@@ -96,20 +21,63 @@ export default function ContactSection() {
         <div className='flex flex-col'>
           <p className='text-base text-vivid-sky-blue font-bold'>Technical Platform</p>
           <div className='space-x-4 flex mt-2'>
-            <Link href="">
+            <Link target='_blank' href="https://www.linkedin.com/in/cirilo-bucatcat-30500916b">
               <Image src="/tlinkedin.svg" alt='LinkedIn Profile Icon' width={32} height={32} />
             </Link>
-            <Link href="https://facebook.com/cirilo.dev">
+            <Link target='_blank' href="https://facebook.com/cirilo.dev">
               <Image src="/tfacebook.svg" alt='Facebook Profile Icon' width={32} height={32} />
             </Link>
-            <Link href="https://github.com/cirilobucatcat">
+            <Link target='_blank' href="https://github.com/cirilobucatcat">
               <Image src="/tgithub.svg" alt='Github Profile Icon' width={32} height={32} />
             </Link>
           </div>
         </div>
       </div>
-      <div>
-        contact form
+      <div className='w-125 h-112.5 bg-brand-gradient p-0.75 rounded-lg'>
+        <div className='h-full w-full bg-nero rounded-sm p-4'>
+          <div>
+            <label htmlFor="name" className='text-header-gradient font-bold uppercase'>YOUR FULL NAME</label>
+            <div className='bg-brand-gradient p-0.75 rounded-sm'>
+              <input
+                type="text"
+                placeholder='Enter your full name here'
+                className='w-full py-2 text-ghost-white px-2 bg-nero'
+              />
+            </div>
+          </div>
+          <div className='mt-2'>
+            <label htmlFor="name" className='text-header-gradient font-bold uppercase'>EMAIL ADDRESS</label>
+            <div className='bg-brand-gradient p-0.75 rounded-sm'>
+              <input
+                type="text"
+                placeholder='Enter your email address here'
+                className='w-full py-2 text-ghost-white px-2 bg-nero'
+              />
+            </div>
+          </div>
+          <div className='mt-2'>
+            <label htmlFor="name" className='text-header-gradient font-bold uppercase'>SUBJECT</label>
+            <div className='bg-brand-gradient p-0.75 rounded-sm'>
+              <input
+                type="text"
+                placeholder='Enter your email subject here'
+                className='w-full py-2 text-ghost-white px-2 bg-nero'
+              />
+            </div>
+          </div>
+          <div className='mt-2'>
+            <label htmlFor="name" className='text-header-gradient font-bold uppercase'>MESSAGE</label>
+            <div className='bg-brand-gradient p-0.75 rounded-sm'>
+              <textarea
+                cols={4}
+                placeholder='Enter you message here'
+                className='w-full py-2 text-ghost-white px-2 bg-nero resize-none'
+              ></textarea>
+            </div>
+          </div>
+          <button className='bg-vivid-sky-blue mt-4 w-full py-2 rounded-sm font-bold text-nero cursor-pointer hover:bg-vivid-sky-blue/75 transition-colors duration-300'>SUBMIT</button>
+          <p className='mt-2 text-red-500 font-semibold text-sm'>Refrain sending sensitive data!</p>
+        </div>
       </div>
     </div>
   </section>)

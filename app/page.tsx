@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  return (<>
+  return (<div className="px-6 lg:px-75 ">
     <header className="z-50 fixed lg:sticky lg:top-10">
       <Navigation />
     </header>
@@ -26,5 +26,5 @@ export default function Home() {
     <Ellipse ellipseClass={"size-50 lg:size-111.25 top-230 right-0 lg:-right-50"} />
     <Ellipse ellipseClass={"size-30 lg:size-80.5 top-430 lg:left-20"} />
     <Ellipse ellipseClass={"size-40 lg:size-60 top-700 left-10 lg:left-150"} />
-  </>);
+  </div>);
 }

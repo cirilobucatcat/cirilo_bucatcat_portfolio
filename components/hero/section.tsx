@@ -1,7 +1,7 @@
 export default function HeroSection() {
     return (
-        <section id="hero" className="relative flex flex-col justify-center items-center mt-24 lg:mt-54.5">
-            <div className="bg-vivid-sky-blue/30 relative before:size-2 before:left-3.25 lg:before:size-2.5 before:bg-vivid-sky-blue before:rounded-full before:absolute before:top-2 lg:before:top-2.75 w-fit rounded-full after:animate-ping px-3 py-1 after:top-1.75 lg:after:top-2.5 md:after:top-2.75 after:absolute after:size-2.5 after:rounded-full after:bg-vivid-sky-blue">
+        <section id="#" className="relative flex flex-col justify-center items-center mt-24 lg:mt-54.5">
+            <div className="bg-vivid-sky-blue/30 relative before:size-2 before:left-3.25 lg:before:size-2.5 before:bg-vivid-sky-blue before:rounded-full before:absolute before:top-2 lg:before:top-2.75 w-fit rounded-full after:animate-ping px-3 py-1 after:top-1.75 lg:after:left-3.25 lg:after:top-2.75 md:after:top-2.75 after:absolute after:size-2.5 after:rounded-full after:bg-vivid-sky-blue">
                 <p className="ml-3.5 lg:ml-5 text-vivid-sky-blue font-semibold tracking-tight text-xs lg:text-base">Building Next.js Projects</p>
             </div>
             <h1 className="mt-4 lg:mt-8 flex flex-col items-center justify-center">

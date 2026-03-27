@@ -137,7 +137,7 @@ export default function TechStacksPage() {
     }
 
     return (
-        <div className="w-full">
+        <div className="w-full mb-34">
             <p className="text-header-gradient text-4xl font-black uppercase text-center mt-24">Technical Stacks</p>
             <p className="text-ghost-white text-center text-xl mt-16 font-semibold uppercase">Frontend</p>
             <div className="w-full flex flex-wrap grow justify-center items-center gap-4 mt-8 px-10">

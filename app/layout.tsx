@@ -20,9 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${openSans.variable} ${robotoMono.variable} bg-[url(/noisebg.png)] bg-repeat bg-nero px-6 lg:px-75 antialiased overflow-x-hidden relative`}
+        className={`${openSans.variable} ${robotoMono.variable} bg-[url(/noisebg.png)] bg-repeat bg-nero antialiased overflow-x-hidden relative`}
       >
         {children}
+        <footer className="bg-brand-gradient mt-12 text-center py-2">
+          <p className="text-sm">developed using next.js by meee :D &copy; 2026 Cirilo Bucatcat Jr.</p>
+        </footer>
       </body>
     </html>
   );
