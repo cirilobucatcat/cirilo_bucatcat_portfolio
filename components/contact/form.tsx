@@ -1,0 +1,68 @@
+'use client'
+import { sendEmailMessage } from '@/app/actions/contact'
+import { useActionState } from 'react'
+
+export default function ContactForm() {
+  const [state, action, pending] = useActionState(sendEmailMessage, undefined)
+
+  return (<form action={action} className='h-fit w-full bg-nero rounded-sm p-4'>
+          <p>{JSON.stringify(state?.errors)}</p>
+          <div>
+            <label htmlFor="name" className='text-header-gradient font-bold uppercase text-lg'>YOUR FULL NAME</label>
+            <div className='bg-brand-gradient p-0.75 rounded-sm mt-1'>
+              <input
+                type="text"
+                name='name'
+                placeholder='Enter your full name here'
+                className='w-full py-2 text-ghost-white px-2 bg-nero'
+              />
+            </div>
+            {state?.errors?.name && (
+              <p className='text-red-500 font-semibold text-base'>{state.errors.name[0]}</p>
+            )}
+          </div>
+          <div className='mt-2'>
+            <label htmlFor="name" className='text-header-gradient font-bold uppercase text-lg'>EMAIL ADDRESS</label>
+            <div className='bg-brand-gradient p-0.75 rounded-sm mt-1'>
+              <input
+                type="text"
+                name='email'
+                placeholder='Enter your email address here'
+                className='w-full py-2 text-ghost-white px-2 bg-nero'
+              />
+            </div>
+            {state?.errors?.email && (
+              <p className='text-red-500 font-semibold text-base'>{state.errors.email[0]}</p>
+            )}
+          </div>
+          <div className='mt-2'>
+            <label htmlFor="name" className='text-header-gradient font-bold uppercase text-lg'>SUBJECT</label>
+            <div className='bg-brand-gradient p-0.75 rounded-sm mt-1'>
+              <input
+                type="text"
+                name='subject'
+                placeholder='Enter your email subject here'
+                className='w-full py-2 text-ghost-white px-2 bg-nero'
+              />
+            </div>
+            {state?.errors?.subject && (
+              <p className='text-red-500 font-semibold text-base'>{state.errors.subject[0]}</p>
+            )}
+          </div>
+          <div className='mt-2'>
+            <label htmlFor="name" className='text-header-gradient font-bold uppercase text-lg'>MESSAGE</label>
+            <div className='bg-brand-gradient p-0.75 rounded-sm mt-1'>
+              <textarea
+                name='message'
+                placeholder='Enter you message here'
+                className='w-full py-2 text-ghost-white px-2 h-48 bg-nero resize-none'
+              ></textarea>
+            </div>
+          </div>
+          {state?.errors?.message && (
+              <p className='text-red-500 font-semibold text-base'>{state.errors.message[0]}</p>
+            )}
+          <button disabled={pending} className='mt-8 disabled:bg-vivid-sky-blue/75 bg-vivid-sky-blue w-full py-2 rounded-sm font-bold text-nero cursor-pointer hover:bg-vivid-sky-blue/75 transition-colors duration-300'>{pending ? 'SENDING...' : 'SUBMIT'}</button>
+          <p className='mt-2 text-red-500 font-semibold text-base'>Please avoid sending sensitive data!</p>
+        </form>)
+}

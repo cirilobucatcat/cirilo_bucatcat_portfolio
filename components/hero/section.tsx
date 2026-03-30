@@ -10,7 +10,7 @@ export default function HeroSection() {
                     FULL STACK <br /> WEB DEVELOPER
                 </span>
             </h1>
-            <h3 className="text-ghost-white text-sm lg:w-137.5 text-center mt-3">A web developer dedicated about creating efficient and user-friendly solutions to meet the ever-evolving needs of the digital world using AI.</h3>
+            <h3 className="text-ghost-white text-sm lg:text-lg lg:w-148 text-center mt-3">A web developer dedicated about creating efficient and user-friendly solutions to meet the ever-evolving needs of the digital world using AI.</h3>
             <button className="bg-vivid-sky-blue text-nero mt-8 lg:mt-18 w-36 lg:w-50 lg:text-base text-sm font-semibold uppercase h-10 lg:h-14 rounded-sm cursor-pointer hover:bg-vivid-sky-blue/85">Download CV</button>
         </section>
     )

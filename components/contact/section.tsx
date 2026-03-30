@@ -1,25 +1,9 @@
-import { transporter } from '@/plugins/transporter'
 import Image from 'next/image'
 import Link from 'next/link'
+import ContactForm from './form'
 
 export default function ContactSection() {
 
-  const sendEmail = async (values) => {
-    try {
-
-      const info = await transporter.sendMail({
-        from: '"Example Team" <team@example.com>',
-        to: data.to_email,
-        subject: data.subject,
-        text: data.message,
-      });
-
-      console.log("Message sent: %s", info.messageId);
-      // console.log("Preview URL: %s",  nodemailer.getTestMessageUrl(info));
-    } catch (err) {
-      console.error("Error while sending mail:", err);
-    }
-  }
 
   return (<section id='contact' className='relative pt-18 lg:pt-32'>
     <h3 className='text-center text-header-gradient font-extrabold text-2xl tracking-[5%] leading-[110%] uppercase'>contact</h3>
@@ -51,51 +35,8 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
-      <div className='w-125 h-112.5 bg-brand-gradient p-0.75 rounded-lg'>
-        <form className='h-full w-full bg-nero rounded-sm p-4'>
-          <div>
-            <label htmlFor="name" className='text-header-gradient font-bold uppercase'>YOUR FULL NAME</label>
-            <div className='bg-brand-gradient p-0.75 rounded-sm'>
-              <input
-                type="text"
-                placeholder='Enter your full name here'
-                className='w-full py-2 text-ghost-white px-2 bg-nero'
-              />
-            </div>
-          </div>
-          <div className='mt-2'>
-            <label htmlFor="name" className='text-header-gradient font-bold uppercase'>EMAIL ADDRESS</label>
-            <div className='bg-brand-gradient p-0.75 rounded-sm'>
-              <input
-                type="text"
-                placeholder='Enter your email address here'
-                className='w-full py-2 text-ghost-white px-2 bg-nero'
-              />
-            </div>
-          </div>
-          <div className='mt-2'>
-            <label htmlFor="name" className='text-header-gradient font-bold uppercase'>SUBJECT</label>
-            <div className='bg-brand-gradient p-0.75 rounded-sm'>
-              <input
-                type="text"
-                placeholder='Enter your email subject here'
-                className='w-full py-2 text-ghost-white px-2 bg-nero'
-              />
-            </div>
-          </div>
-          <div className='mt-2'>
-            <label htmlFor="name" className='text-header-gradient font-bold uppercase'>MESSAGE</label>
-            <div className='bg-brand-gradient p-0.75 rounded-sm'>
-              <textarea
-                cols={4}
-                placeholder='Enter you message here'
-                className='w-full py-2 text-ghost-white px-2 bg-nero resize-none'
-              ></textarea>
-            </div>
-          </div>
-          <button className='bg-vivid-sky-blue mt-4 w-full py-2 rounded-sm font-bold text-nero cursor-pointer hover:bg-vivid-sky-blue/75 transition-colors duration-300'>SUBMIT</button>
-          <p className='mt-2 text-red-500 font-semibold text-sm'>Refrain sending sensitive data!</p>
-        </form>
+      <div className='w-125 bg-brand-gradient p-0.75 rounded-lg'>
+        <ContactForm/>
       </div>
     </div>
   </section>)
