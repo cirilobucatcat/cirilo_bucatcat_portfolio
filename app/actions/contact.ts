@@ -5,7 +5,6 @@ import { transporter } from "@/plugins/transporter";
 
 export async function sendEmailMessage(prevState: FormState, formData: FormData) {
     
-    console.log(prevState)
     const validatedFields = ContactFormSchema.safeParse({
         name: formData.get('name'),
         email: formData.get('email'),
@@ -15,6 +14,7 @@ export async function sendEmailMessage(prevState: FormState, formData: FormData)
 
     if (!validatedFields.success) {
         return {
+            success: false,
             errors: validatedFields.error.flatten().fieldErrors,
             message: 'Missing Fields. Failed to send message',
         }
@@ -23,7 +23,7 @@ export async function sendEmailMessage(prevState: FormState, formData: FormData)
     try {
 
         const { name, email, subject, message } = validatedFields.data
-        const info = await transporter.sendMail({
+        await transporter.sendMail({
             from: `${name}" <${process.env.NEXT_FROM_EMAIL}>`,
             to: process.env.NEXT_FROM_EMAIL,
             replyTo: email,
@@ -34,9 +34,8 @@ export async function sendEmailMessage(prevState: FormState, formData: FormData)
               <p><strong>Message:</strong> ${message}</p>`,
         });
 
-        return { message: 'Email has successfully sent!', data: info }
-
+        return { success: true, message: 'Email has successfully sent!'}
     } catch (err) {
-        return { message: "Error while sending mail:", error: err}
+        return { success: false, message: "Error while sending mail:" }
     }
 }

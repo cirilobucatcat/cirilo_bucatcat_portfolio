@@ -8,5 +8,5 @@ export const ContactFormSchema = z.object({
 });
 
 export type FormState =
-  | { errors?: { name?: string[]; email?: string[], subject?: string[], message?: string[] }; message?: string }
+  | { success: boolean, errors?: { name?: string[]; email?: string[], subject?: string[], message?: string[] }; message?: string }
   | undefined;
