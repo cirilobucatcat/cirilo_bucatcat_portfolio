@@ -16,7 +16,7 @@ export default function ProjectCard({ title, description, imageSrc, repositoryUr
             <Image
                 src={imageSrc}
                 alt="Placeholder"
-                className="w-90 h-62.5 object-cover rounded-t-lg"
+                className="w-auto h-auto object-cover rounded-t-lg"
                 width={360}
                 height={250}
             />

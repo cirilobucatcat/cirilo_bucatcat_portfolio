@@ -4,12 +4,11 @@ import ContactForm from './form'
 
 export default function ContactSection() {
 
-
   return (<section id='contact' className='relative pt-18 lg:pt-32'>
     <h3 className='text-center text-header-gradient font-extrabold text-2xl tracking-[5%] leading-[110%] uppercase'>contact</h3>
     <p className='text-center text-ghost-white/85 mt-2.75 text-xs lg:text-sm'>Let`s collaborate and make things into reality</p>
-    <div className='mt-12 grid grid-cols-2 gap-x-4 place-items-start justify-items-center'>
-      <div className='flex flex-col gap-y-4 w-full'>
+    <div className='mt-12 grid grid-cols-1 lg:grid-cols-2 gap-x-4 place-items-start justify-items-center'>
+      <div className='mt-4 lg:mt-0 order-2 lg:order-1 flex flex-col items-center lg:items-start gap-y-4 w-full'>
         <div className='flex flex-col'>
           <div className='inline-flex space-x-2'>
             <Image src="/at.svg" alt='Email Icon' width={24} height={24} />
@@ -35,7 +34,7 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
-      <div className='w-125 bg-brand-gradient p-0.75 rounded-lg'>
+      <div className='order-1 lg:order-2 w-full lg:w-125 bg-brand-gradient p-0.75 rounded-lg'>
         <ContactForm/>
       </div>
     </div>

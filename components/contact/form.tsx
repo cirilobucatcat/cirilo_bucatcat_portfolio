@@ -29,14 +29,14 @@ export default function ContactForm() {
 
   return (<form action={action} className='h-fit w-full bg-nero rounded-sm p-4'>
     <div>
-      <label htmlFor="name" className='text-header-gradient font-bold uppercase text-lg'>YOUR FULL NAME</label>
+      <label htmlFor="name" className='text-header-gradient font-bold uppercase text-sm lg:text-lg'>YOUR FULL NAME</label>
       <div className={twMerge('bg-brand-gradient p-0.75 rounded-sm mt-1', pending ? 'opacity-50' : '')}>
         <input
           disabled={pending}
           type="text"
           name='name'
           placeholder='Enter your full name here'
-          className='w-full disabled:cursor-not-allowed py-2 text-ghost-white px-2 bg-nero'
+          className='w-full disabled:cursor-not-allowed text-sm lg:text-base py-2 text-ghost-white px-2 bg-nero'
         />
       </div>
       {state?.errors?.name && (
@@ -44,14 +44,14 @@ export default function ContactForm() {
       )}
     </div>
     <div className='mt-2'>
-      <label htmlFor="name" className='text-header-gradient font-bold uppercase text-lg'>EMAIL ADDRESS</label>
+      <label htmlFor="name" className='text-header-gradient font-bold uppercase text-sm lg:text-lg'>EMAIL ADDRESS</label>
       <div className={twMerge('bg-brand-gradient p-0.75 rounded-sm mt-1', pending ? 'opacity-50' : '')}>
         <input
           disabled={pending}
           type="text"
           name='email'
           placeholder='Enter your email address here'
-          className='w-full disabled:cursor-not-allowed py-2 text-ghost-white px-2 bg-nero'
+          className='w-full disabled:cursor-not-allowed text-sm lg:text-base py-2 text-ghost-white px-2 bg-nero'
         />
       </div>
       {state?.errors?.email && (
@@ -59,14 +59,14 @@ export default function ContactForm() {
       )}
     </div>
     <div className='mt-2'>
-      <label htmlFor="name" className='text-header-gradient font-bold uppercase text-lg'>SUBJECT</label>
+      <label htmlFor="name" className='text-header-gradient font-bold uppercase text-sm lg:text-lg'>SUBJECT</label>
       <div className={twMerge('bg-brand-gradient p-0.75 rounded-sm mt-1', pending ? 'opacity-50' : '')}>
         <input
           disabled={pending}
           type="text"
           name='subject'
           placeholder='Enter your email subject here'
-          className='w-full disabled:cursor-not-allowed py-2 text-ghost-white px-2 bg-nero'
+          className='w-full disabled:cursor-not-allowed text-sm lg:text-base py-2 text-ghost-white px-2 bg-nero'
         />
       </div>
       {state?.errors?.subject && (
@@ -74,13 +74,13 @@ export default function ContactForm() {
       )}
     </div>
     <div className='mt-2'>
-      <label htmlFor="name" className='text-header-gradient font-bold uppercase text-lg'>MESSAGE</label>
+      <label htmlFor="name" className='text-header-gradient font-bold uppercase text-sm lg:text-lg'>MESSAGE</label>
       <div className={twMerge('bg-brand-gradient p-0.75 rounded-sm mt-1', pending ? 'opacity-50' : '')}>
         <textarea
           disabled={pending}
           name='message'
           placeholder='Enter you message here'
-          className='w-full py-2 disabled:cursor-not-allowed text-ghost-white px-2 h-48 bg-nero resize-none'
+          className='w-full py-2 disabled:cursor-not-allowed text-sm lg:text-base text-ghost-white px-2 h-32 lg:h-48 bg-nero resize-none'
         ></textarea>
       </div>
     </div>
